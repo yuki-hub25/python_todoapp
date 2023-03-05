@@ -1,13 +1,13 @@
 databases:
-  - name: django_todo_db
-    databaseName: django_todo_db
-    user: django_todo_user
+  - name: django_app_db
+    databaseName: django_app_db
+    user: django_app_user
     region: singapore
     plan: free
 
 services:
   - type: web
-    name: django_todo
+    name: django_app
     env: python
     region: singapore
     plan: free
@@ -17,7 +17,7 @@ services:
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: django_todo_db
+          name: django_app_db
           property: connectionString
       - key: SECRET_KEY
         generateValue: true
