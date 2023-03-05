@@ -1,24 +1,27 @@
 databases:
-  - name: todo_db
+  - name: django_todo_db
+    databaseName: django_todo_db
+    user: django_todo_user
+    region: singapore
     plan: free
-    databaseName: todo_db1
-    user: todo_db
 
 services:
   - type: web
-    name: todoapp
-    plan: free
+    name: django_todo
     env: python
+    region: singapore
+    plan: free
+    branch: main
+    helthCheckPath: /
     buildCommand: "./build.sh"
-    startCommand: "gunicorn django_todoapp.wsgi:application"
+    startCommand: "gunicorn mysite.wsgi:application"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: todo_db
+          name: django_todo_db
           property: connectionString
       - key: SECRET_KEY
         generateValue: true
       - key: WEB_CONCURRENCY
-        value: 2
-      - key: DJANGO_SUPERUSER_PASSWORD
-        generateValue: true
+        value: 4
+    autoDeploy: true
