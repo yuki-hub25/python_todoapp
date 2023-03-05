@@ -1,0 +1,8 @@
+{% extends 'todoapp/base.html' %} {% block content %}
+
+<h1>タスク：{{task.title}}</h1>
+<p>内容：{{task.description}}</p>
+
+<a href="{% url 'tasks' %}">戻る</a>
+
+{% endblock content %}

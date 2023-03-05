@@ -1,0 +1,126 @@
+body {
+  background-color: #4c4c4c;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  padding-top: 55px;
+}
+
+.todoAppWrapper {
+  max-width: 530px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 5px 7px 20px 0px rgb(0, 0, 0);
+  border-radius: 10px;
+}
+a {
+  color: #595959;
+  text-decoration: none;
+}
+h1 {
+  margin: 0;
+}
+.header {
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  padding: 20px 0;
+  background-image: linear-gradient(
+    90deg,
+    rgba(144, 245, 154, 1),
+    rgba(4, 202, 255, 1)
+  );
+}
+.taskWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  border-top: 1px solid rgba(72, 72, 72, 0.515);
+}
+
+.taskTitle {
+  display: flex;
+  align-items: center;
+}
+
+.taskCompletedIcon {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(190, 253, 131);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.taskInCompletedIcon {
+  height: 20px;
+  width: 20px;
+  background-color: rgb(255, 190, 190);
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.loginAndLogout {
+  padding: 20px;
+}
+
+.loginAndLogout a {
+  color: lightcoral;
+}
+
+.yoko {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.yoko a {
+  flex-basis: calc(33.33% - 10px); /* 3つの要素を等分する */
+  display: block;
+}
+
+/* タスク検索と追加のフォーム */
+.searchWrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  align-items: center;
+}
+.searchInput {
+  height: 24px;
+  outline: none;
+  border: 1px solid lightseagreen;
+  border-radius: 5px;
+  padding:  2px 4px;
+  width: 160px !important;
+}
+.searchButton {
+  border: 1px solid lightseagreen;
+  border-radius: 5px;
+  padding:  4px 10px;
+  background-color: aliceblue;
+  color: lightseagreen;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.searchButton:hover {
+  background-color: lightseagreen;
+  color: aliceblue;
+  transition: all 0.4s;
+}
+.addButton {
+  color: lightseagreen;
+}
+
+label{
+  display: block;
+}
+
+input[type="text"],
+textarea{
+  width:100%;
+}
+
+.accountWrapper{
+  padding:10px 20px 20px 20px;
+}
+.accountWrapper p{
+  margin:0px;
+  padding:0px;
+}
+

@@ -1,0 +1,24 @@
+databases:
+  - name: todo_db
+    plan: free
+    databaseName: todo_db1
+    user: todo_db
+
+services:
+  - type: web
+    name: todoapp
+    plan: free
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn django_todoapp.wsgi:application"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: todo_db
+          property: connectionString
+      - key: SECRET_KEY
+        generateValue: true
+      - key: WEB_CONCURRENCY
+        value: 2
+      - key: DJANGO_SUPERUSER_PASSWORD
+        generateValue: true
