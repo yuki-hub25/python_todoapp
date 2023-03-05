@@ -94,7 +94,7 @@ USE_TZ = True
 
 LOGIN_URL = "login"
 
-STATIC_ROOT = '/path/to/static/files/'
+STATIC_ROOT = '../todoapp/static'
 
 STATIC_URL = 'static/'
 STATIC_DIRS = [BASE_DIR / "static"]
